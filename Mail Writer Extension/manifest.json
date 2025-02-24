@@ -1,0 +1,33 @@
+{
+    "name": "Email Writer Assistant",
+    "description": "AI-integrated email reply generator ",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["scripting", "activeTab"]
+    ,
+    "host_permissions": [
+        "https://localhost:8080/*",
+        "*://mail.google.com/*"
+      ],
+      "content_scripts": [
+    {
+      "js": [
+        "Script.js"
+      ],
+      "matches": ["*://mail.google.com/*"],
+      "css":["style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  
+    "web_accessible_resources": [
+      {
+        "resources": [ "icons/*", "test2.png" ],
+        "matches": [ "*://mail.google.com/*" ]
+      }
+    ], 
+
+    "action": {
+      "default_title": "Email writer Assistant"
+    }
+  }
