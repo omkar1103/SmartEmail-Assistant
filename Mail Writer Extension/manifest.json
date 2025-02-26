@@ -22,7 +22,7 @@
   
     "web_accessible_resources": [
       {
-        "resources": [ "icons/*", "test2.png" ],
+        "resources": [ "icons/*" ],
         "matches": [ "*://mail.google.com/*" ]
       }
     ], 
